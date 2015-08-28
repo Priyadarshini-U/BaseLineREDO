@@ -11,4 +11,19 @@ public class TypeTest {
         assertEquals(true, new Type("Electronics").taxable());
     }
 
+    @Test
+    public void shouldNotBeTaxableForFoods() {
+        assertEquals(false, new Type("Foods").taxable());
+    }
+
+    @Test
+    public void shouldNotBeTaxableForBooks() {
+        assertEquals(false, new Type("Books").taxable());
+    }
+
+    @Test
+    public void shouldNotBeTaxableForMedicines() {
+        assertEquals(false, new Type("Medicines").taxable());
+    }
+
 }

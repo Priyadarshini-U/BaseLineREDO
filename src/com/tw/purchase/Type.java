@@ -8,6 +8,12 @@ public class Type {
     }
 
     boolean taxable(){
+        if(name.equals("Foods"))
+            return false;
+        if(name.equals("Books"))
+            return false;
+        if(name.equals("Medicines"))
+            return false;
         return true;
     }
 
