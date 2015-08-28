@@ -22,7 +22,9 @@ public class Good {
     }
 
     public int totalTaxPercentage() {
-        int totalTaxPercentage = 15;
+        int totalTaxPercentage = 10;
+        if (imported())
+            totalTaxPercentage += 5;
         return totalTaxPercentage;
     }
 

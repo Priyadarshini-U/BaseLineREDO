@@ -17,7 +17,12 @@ public class GoodTest {
     }
 
     @Test
-    public void shouldReturnTotalTaxForNotImportedNotSalesTaxExemptedGood() {
-        assertEquals(15, new Good("perfume", 12.0, new Type("accesories")).totalTaxPercentage());
+    public void shouldReturnTotalTaxForImportedNotSalesTaxExemptedGood() {
+        assertEquals(15, new Good("imported perfume", 12.0, new Type("accesories")).totalTaxPercentage());
+    }
+
+    @Test
+    public void shouldReturnTotalTaxForNotImportedSalesTaxExemptedGood() {
+        assertEquals(10, new Good("perfume", 12.0, new Type("accesories")).totalTaxPercentage());
     }
 }
