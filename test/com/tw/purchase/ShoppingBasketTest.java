@@ -8,8 +8,8 @@ public class ShoppingBasketTest {
 
     @Test
     public void shouldCalculateTaxForEmptyBasket() {
-        assertEquals(0,new ShoppingBasket().totalTax(),0.0);
+        assertEquals(0, new ShoppingBasket().totalTax(), 0.0);
     }
 
-    
+
 }
