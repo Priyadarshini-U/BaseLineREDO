@@ -1,18 +1,20 @@
 package com.tw.purchase;
 
 public class Type {
-    String name;
+    private String name;
 
     public Type(String name) {
         this.name = name;
     }
 
-    boolean taxable(){
-        if(name.equals("Foods"))
+    private boolean inSalesTaxExemptedList() {
+        if (name.equals("Foods") || name.equals("Books") || name.equals("Medicines"))
             return false;
-        if(name.equals("Books"))
-            return false;
-        if(name.equals("Medicines"))
+        return true;
+    }
+
+    boolean taxable() {
+        if (inSalesTaxExemptedList())
             return false;
         return true;
     }

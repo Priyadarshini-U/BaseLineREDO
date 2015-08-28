@@ -10,4 +10,5 @@ public class Good {
         this.price = price;
         this.type = type;
     }
+
 }
