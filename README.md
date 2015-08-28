@@ -2,8 +2,7 @@
 
 ##Problem Description
 
-    Model a line out of two cartesian points and calculates its length
-    Also check the equality of two lines given their end points
+    Model a shopping basket to calculate sales tax and import tax
 
 ##Pre-Requisites
 
