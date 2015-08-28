@@ -12,7 +12,7 @@ public class Good {
     }
 
     public boolean imported() {
-        if(checkIfStringContainsImported())
+        if (checkIfStringContainsImported())
             return true;
         return false;
     }
@@ -28,6 +28,26 @@ public class Good {
         if (type.taxable())
             totalTaxPercentage += 10;
         return totalTaxPercentage;
+    }
+
+    public double calculateTax(int percentage) {
+        return price * percentage / 100;
+    }
+
+    @Override
+    public boolean equals(Object that) {
+        if (this == that)
+            return true;
+        Good thatGood = that instanceof Good ? (Good) that : null;
+        if (thatGood != null) {
+            return this.name.equals(thatGood.name);
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode();
     }
 
 }

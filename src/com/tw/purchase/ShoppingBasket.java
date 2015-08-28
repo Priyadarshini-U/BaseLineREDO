@@ -11,7 +11,11 @@ public class ShoppingBasket {
     }
 
     public double totalTax() {
-        return 0;
+        double tax = 0;
+        for( Good item: items.keySet()){
+            tax += items.get(item) * item.calculateTax(item.totalTaxPercentage()) ;
+        }
+        return tax;
 
     }
     public void addToBasket(Good good, int quantity) {

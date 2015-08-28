@@ -10,4 +10,6 @@ public class ShoppingBasketTest {
     public void shouldCalculateTaxForEmptyBasket() {
         assertEquals(0,new ShoppingBasket().totalTax(),0.0);
     }
+
+    
 }

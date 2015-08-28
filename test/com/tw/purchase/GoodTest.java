@@ -30,4 +30,43 @@ public class GoodTest {
     public void shouldReturnTotalTaxForImportedSalesTaxExemptedGood() {
         assertEquals(10, new Good("perfume", 12.0, new Type("accesories")).totalTaxPercentage());
     }
+
+    @Test
+    public void shouldBeEqualWithItself() {
+        Good good1 = new Good("perfume", 12.0, new Type("accesories"));
+
+        assertEquals(good1, good1);
+    }
+
+    @Test
+    public void shouldBeEqualWithGoodWithSameName() {
+        Good good1 = new Good("perfume", 12.0, new Type("accesories"));
+        Good good2 = new Good("perfume", 12.0, new Type("accesories"));
+
+        assertEquals(good1, good2);
+    }
+
+    @Test
+    public void shouldBeEqualWithGoodWithSameNameAndSamePrice() {
+        Good good1 = new Good("perfume", 12.0, new Type("accesories"));
+        Good good2 = new Good("perfume", 12.0, new Type("accesories"));
+
+        assertEquals(good1, good2);
+    }
+
+    @Test
+    public void shouldHaveEqualHashCodeForEqualGoods() {
+        Good good1 = new Good("perfume", 12.0, new Type("accesories"));
+        Good good2 = new Good("perfume", 12.0, new Type("accesories"));
+
+        assertEquals(good1.hashCode(), good2.hashCode());
+    }
+
+    @Test
+    public void shouldReturnTaxPercentage() {
+        Good good1 = new Good("perfume", 12.0, new Type("accesories"));
+
+        assertEquals(1.2, good1.calculateTax(10), 0.0);
+
+    }
 }
