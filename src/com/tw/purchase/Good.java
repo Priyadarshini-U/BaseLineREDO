@@ -11,4 +11,7 @@ public class Good {
         this.type = type;
     }
 
+    public boolean imported() {
+        return false;
+    }
 }
