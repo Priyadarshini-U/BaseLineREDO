@@ -12,6 +12,13 @@ public class Good {
     }
 
     public boolean imported() {
+        if(checkIfStringContainsImported())
+            return true;
         return false;
     }
+
+    private boolean checkIfStringContainsImported() {
+        return name.toLowerCase().contains("imported");
+    }
+
 }

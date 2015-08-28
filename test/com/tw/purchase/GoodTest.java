@@ -11,4 +11,9 @@ public class GoodTest {
         assertEquals(false, new Good("chocolates",12.0,new Type("food")).imported());
     }
 
+    @Test
+    public void shouldReturnTrueIfImported() {
+        assertEquals(true, new Good("imported box of chocolates",12.0,new Type("food")).imported());
+    }
+
 }

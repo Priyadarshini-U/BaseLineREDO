@@ -9,8 +9,8 @@ public class Type {
 
     private boolean inSalesTaxExemptedList() {
         if (name.equals("Foods") || name.equals("Books") || name.equals("Medicines"))
-            return false;
-        return true;
+            return true;
+        return false;
     }
 
     boolean taxable() {
