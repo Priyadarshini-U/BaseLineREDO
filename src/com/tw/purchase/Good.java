@@ -22,9 +22,11 @@ public class Good {
     }
 
     public int totalTaxPercentage() {
-        int totalTaxPercentage = 10;
+        int totalTaxPercentage = 0;
         if (imported())
             totalTaxPercentage += 5;
+        if (type.taxable())
+            totalTaxPercentage += 10;
         return totalTaxPercentage;
     }
 
